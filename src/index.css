@@ -3,48 +3,48 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.98 0 0);
-  --foreground: oklch(0.15 0 0);
+  --background: oklch(0.99 0 0); /* Pure White for a bright, clean look */
+  --foreground: oklch(0.12 0.02 250); /* Soft Charcoal/Black */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0 0);
+  --card-foreground: oklch(0.12 0.02 250);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0 0);
-  --primary: oklch(0.45 0.1 150); /* Professional Green */
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.9 0.02 250);
-  --secondary-foreground: oklch(0.15 0 0);
-  --muted: oklch(0.94 0.01 250);
-  --muted-foreground: oklch(0.4 0 0);
-  --accent: oklch(0.55 0.1 150);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.5 0.15 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.85 0 0);
-  --input: oklch(0.85 0 0);
-  --ring: oklch(0.45 0.1 150);
+  --popover-foreground: oklch(0.12 0.02 250);
+  --primary: oklch(0.7 0.25 150); /* Vibrant, Lively Green (Lime/Neon) */
+  --primary-foreground: oklch(0.15 0 0);
+  --secondary: oklch(0.95 0.01 250); /* Light Grey */
+  --secondary-foreground: oklch(0.12 0.02 250);
+  --muted: oklch(0.96 0.01 250);
+  --muted-foreground: oklch(0.45 0.02 250);
+  --accent: oklch(0.85 0.2 150); /* Softer Lively Green */
+  --accent-foreground: oklch(0.15 0 0);
+  --destructive: oklch(0.5 0.2 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0.01 250);
+  --input: oklch(0.9 0.01 250);
+  --ring: oklch(0.7 0.25 150);
   
-  --radius: 0.5rem;
+  --radius: 1.25rem; /* Friendly, modern rounded corners */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 .dark {
-  --background: oklch(0.15 0 0);
+  --background: oklch(0.18 0.02 250); /* Not too dark, just deep grey */
   --foreground: oklch(0.98 0 0);
-  --card: oklch(0.18 0 0);
+  --card: oklch(0.22 0.02 250);
   --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.18 0 0);
+  --popover: oklch(0.22 0.02 250);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.6 0.1 150);
+  --primary: oklch(0.75 0.25 150);
   --primary-foreground: oklch(0.15 0 0);
-  --secondary: oklch(0.25 0 0);
+  --secondary: oklch(0.28 0.02 250);
   --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.25 0 0);
-  --muted-foreground: oklch(0.7 0 0);
-  --accent: oklch(0.6 0.1 150);
+  --muted: oklch(0.28 0.02 250);
+  --muted-foreground: oklch(0.7 0.02 250);
+  --accent: oklch(0.75 0.25 150);
   --accent-foreground: oklch(0.15 0 0);
-  --border: oklch(0.3 0 0);
-  --input: oklch(0.3 0 0);
-  --ring: oklch(0.6 0.1 150);
+  --border: oklch(0.3 0.02 250);
+  --input: oklch(0.3 0.02 250);
+  --ring: oklch(0.75 0.25 150);
 }
 
 @theme inline {
@@ -79,20 +79,15 @@
   }
 }
 
-.bg-hero-industrial {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url('https://storage.googleapis.com/dala-prod-public-storage/generated-images/37ef0254-274c-4f98-bdbc-6e3605eaa20a/industrial-bg-64e1541b-1779273018369.webp');
-  background-size: cover;
-  background-position: center;
+.bg-dot-pattern {
+  background-image: radial-gradient(var(--border) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
 }
 
-.bg-workspace-overlay {
-  background-image: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://storage.googleapis.com/dala-prod-public-storage/generated-images/37ef0254-274c-4f98-bdbc-6e3605eaa20a/workspace-vibe-353160e6-1779273018638.webp');
-  background-size: cover;
-  background-position: center;
+.lively-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
 }
 
-.bg-abstract-tech {
-  background-image: linear-gradient(rgba(240, 240, 240, 0.95), rgba(240, 240, 240, 0.95)), url('https://storage.googleapis.com/dala-prod-public-storage/generated-images/37ef0254-274c-4f98-bdbc-6e3605eaa20a/abstract-tech-bg-8ee7e7fb-1779273018657.webp');
-  background-size: cover;
-  background-position: center;
+.card-hover-fun {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10;
 }
